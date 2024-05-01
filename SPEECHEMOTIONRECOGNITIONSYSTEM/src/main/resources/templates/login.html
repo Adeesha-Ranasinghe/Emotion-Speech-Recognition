@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anada - Data Science & Analytics Template">
+
+    <!-- ========== Page Title ========== -->
+    <title>Anada - Data Science & Analytics Template</title>
+
+    <!-- ========== Favicon Icon ========== -->
+   <link rel="shortcut icon" th:href="@{assets/user/img/favicon.png}" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link th:href="@{assets/user/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{assets/user/css/font-awesome.min.css}" rel="stylesheet" />
+    <link th:href="@{assets/user/css/themify-icons.css}" rel="stylesheet" />
+    <link th:href="@{assets/user/css/flaticon-set.css}" rel="stylesheet" />
+    <link th:href="@{assets/user/css/magnific-popup.css}" rel="stylesheet" />
+    <link th:href="@{assets/user/css/owl.carousel.min.css}" rel="stylesheet" />
+    <link th:href="@{assets/user/css/owl.theme.default.min.css}" rel="stylesheet" />
+    <link th:href="@{assets/user/css/animate.css}" rel="stylesheet" />
+    <link th:href="@{assets/user/css/bootsnav.css}" rel="stylesheet" />
+    <link th:href="@{assets/user/css/style.css}" rel="stylesheet">
+    <link th:href="@{assets/user/css/responsive.css}" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient">
+
+    <!-- Start Login 
+    ============================================= -->
+    <div class="login-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-4">
+                    <div class="login-box">
+                        <div class="login">
+                            <div class="content">
+                                <a th:href="@{'/'}"><img th:src="@{assets/user/img/logo.png}" alt="Logo"></a>
+                                <form action="userLogin"  method="post">
+                        <th:block th:if="${param.error}">
+								<h5 class="fw-bold text-danger text-center" id="errorMessage">
+									Incorrect Email or Password. Please try again.
+									</h6>
+							</th:block>
+							<th:block th:if="${param.logout}">
+								<h5 class="fw-bold text-danger text-center" id="logoutMessage">
+									You have been Successfully Logged Out.
+									</h6>
+							</th:block>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <i class="fas fa-envelope-open"></i> <input name="username" class="form-control" placeholder="Email*" type="email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <i class="fas fa-lock"></i> <input class="form-control" name="password" placeholder="Password*" type="password" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="row">
+                                            <button type="submit">
+                                                Login
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="sign-up">
+                                    <p>
+                                        Don't have an account? <a th:href="@{'/signup'}">Sign up now</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Login -->
+
+    <script th:src="@{assets/user/js/jquery-1.12.4.min.js}"></script>
+    <script th:src="@{assets/user/js/popper.min.js}"></script>
+    <script th:src="@{assets/user/js/bootstrap.min.js}"></script>
+    <script th:src="@{assets/user/js/equal-height.min.js}"></script>
+    <script th:src="@{assets/user/js/jquery.appear.js}"></script>
+    <script th:src="@{assets/user/js/jquery.easing.min.js}"></script>
+    <script th:src="@{assets/user/js/jquery.magnific-popup.min.js}"></script>
+    <script th:src="@{assets/user/js/modernizr.custom.13711.js}"></script>
+    <script th:src="@{assets/user/js/owl.carousel.min.js}"></script>
+    <script th:src="@{assets/user/js/wow.min.js}"></script>
+    <script th:src="@{assets/user/js/progress-bar.min.js}"></script>
+    <script th:src="@{assets/user/js/isotope.pkgd.min.js}"></script>
+    <script th:src="@{assets/user/js/imagesloaded.pkgd.min.js}"></script>
+    <script th:src="@{assets/user/js/count-to.js}"></script>
+    <script th:src="@{assets/user/js/YTPlayer.min.js}"></script>
+    <script th:src="@{assets/user/js/circle-progress.js}"></script>
+    <script th:src="@{assets/user/js/bootsnav.js}"></script>
+    <script th:src="@{assets/user/js/main.js}"></script>
+
+</body>
+</html>
